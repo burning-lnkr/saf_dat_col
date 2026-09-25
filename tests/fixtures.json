@@ -1,0 +1,38 @@
+[
+  {
+    "candidate": "original_combined",
+    "width": 5000,
+    "height": 785,
+    "rgbaSHA256": "2b2af6d453063c388a72842a6f1564ae88cee1029b64e1d9ee530a8e22a5be2e"
+  },
+  {
+    "candidate": "original_copy_context",
+    "width": 5000,
+    "height": 785,
+    "rgbaSHA256": "68ee008684f4540d60dbe6f1f13c8b68f4e879c3083e081817582f0d0245427b"
+  },
+  {
+    "candidate": "original_length_anchors",
+    "width": 5000,
+    "height": 785,
+    "rgbaSHA256": "797d43211b67eee5cf94526da0b18f9a65bdb40cb45ff7e4d07552885f466fa3"
+  },
+  {
+    "candidate": "community_combined",
+    "width": 5000,
+    "height": 785,
+    "rgbaSHA256": "f67cb38a221aac0a53e77e3192a31a8b8fed613e0170b28574f6bf36d0d34eaf"
+  },
+  {
+    "candidate": "community_copy_context",
+    "width": 5000,
+    "height": 785,
+    "rgbaSHA256": "b96ab0c18d6299fa4b2e919a3c94fb14bcd4bb8081d837efc42ba435b59e245b"
+  },
+  {
+    "candidate": "community_length_anchors",
+    "width": 5000,
+    "height": 785,
+    "rgbaSHA256": "c7b011be718a4009279b8ac023ecbb33f8ee05622bd803669f1c20c39e0fb728"
+  }
+]

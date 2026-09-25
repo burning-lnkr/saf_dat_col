@@ -1,0 +1,4 @@
+import fs from 'node:fs';import {inverseUTF8,prepareStream,inflate,sha256}from '../js/codec.js';
+const ix=JSON.parse(fs.readFileSync(new URL('../data/index.json',import.meta.url))), inv=inverseUTF8(new Uint8Array(fs.readFileSync(new URL('../data/saf_dat_col.utf8.bin',import.meta.url)))),cm=new Uint8Array(fs.readFileSync(new URL('../data/community.bin',import.meta.url)));
+console.log('Inverse',inv.bytes.length,inv.unmapped);
+for(const cand of ix.candidates){const st=performance.now(),rec=JSON.parse(fs.readFileSync(new URL('../'+cand.path,import.meta.url))),p=prepareStream(inv,cm,ix,rec),d=inflate(p);const sh=await sha256(d.bytes);if(sh!==cand.sha256||d.error)throw Error(cand.id+': '+JSON.stringify(d.error)+' '+sh);console.log(cand.id,d.bytes.length,sh.slice(0,10),Math.round(performance.now()-st)+'ms');}

@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "test": "Default native grid and combined candidate",
+      "result": "14bbfcec0f7d5a343c0fbd26b548e63ecc93d60db8a730573ca93231249c5b0a"
+    },
+    {
+      "test": "Browser PNG export and exact tenfold row repetition",
+      "result": {
+        "dimensions": [
+          5000,
+          80
+        ],
+        "bytes": 105152
+      }
+    },
+    {
+      "test": "Community source and pinned A/B",
+      "result": true
+    },
+    {
+      "test": "v3 more-CR recipe",
+      "result": true
+    },
+    {
+      "test": "v4 run-aware recipe",
+      "result": true
+    },
+    {
+      "test": "Live copy-context search reproduces prior candidate",
+      "result": 1005
+    },
+    {
+      "test": "Live local model training",
+      "result": {
+        "triples": 5907,
+        "hash": "c87f675280a605f07c3ac726cf890a9647415b6a98236ebe64a7360b446ecb24"
+      }
+    },
+    {
+      "test": "Live all-phase scan",
+      "result": {
+        "phase": 8535,
+        "bad": 64,
+        "rows": 246
+      }
+    },
+    {
+      "test": "Fifteen additional mappings",
+      "result": true
+    },
+    {
+      "test": "Filters and compressed-source inspector",
+      "result": {
+        "block": 1,
+        "streamBit": 146161,
+        "inverseByte": 79310,
+        "uploadedByte": 123100,
+        "communityByte": 71566,
+        "bit": 0,
+        "inserted": false,
+        "preparedByte": 18223
+      }
+    },
+    {
+      "test": "Seed and block-history experiment",
+      "result": true
+    },
+    {
+      "test": "Editable per-block recipe and exact replay",
+      "result": true
+    },
+    {
+      "test": "Bad custom patch handled and restored",
+      "result": true
+    },
+    {
+      "test": "Live LZW prefix",
+      "result": {
+        "indices": 68,
+        "codes": 16
+      }
+    },
+    {
+      "test": "Local binary upload and setup export",
+      "result": true
+    },
+    {
+      "test": "Complete setup restores uploaded bytes",
+      "result": true
+    },
+    {
+      "test": "Desktop screenshot",
+      "result": "browser-artifacts/desktop_final.png"
+    },
+    {
+      "test": "Rapid edits settle on newest settings",
+      "result": true
+    },
+    {
+      "test": "Mobile layout",
+      "result": {
+        "horizontalOverflow": false
+      }
+    },
+    {
+      "test": "No browser runtime errors",
+      "result": []
+    },
+    {
+      "test": "Standalone external network requests",
+      "result": []
+    }
+  ],
+  "browser": "Chromium via Playwright; standalone loaded into page document"
+}

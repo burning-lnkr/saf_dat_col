@@ -1,0 +1,11 @@
+{
+  "format": "saf-byte-workbench",
+  "version": 1,
+  "settings": {
+    "filter": "stored",
+    "mode": "rawrgb",
+    "invalidFilter": "0"
+  },
+  "dictionary": null,
+  "localBytes": null
+}

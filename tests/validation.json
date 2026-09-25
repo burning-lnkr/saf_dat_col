@@ -1,0 +1,163 @@
+{
+  "sources": {
+    "original": {
+      "bytes": 1986163,
+      "sha256": "53cd286fce00071b7a9b75ddbcec2f285d2e893718fc1226d5cea35fa4a6cd6c"
+    },
+    "community": {
+      "bytes": 1249229,
+      "sha256": "f405ba37a341437635a94e91c5bc29fdcd7d0d5265c4ce30a9bbfa829ceb9746"
+    }
+  },
+  "candidateChecks": [
+    {
+      "id": "original_combined",
+      "bytes": 11779416,
+      "payloadSHA256": "14bbfcec0f7d5a343c0fbd26b548e63ecc93d60db8a730573ca93231249c5b0a",
+      "standardZlib": true
+    },
+    {
+      "id": "original_copy_context",
+      "bytes": 11779452,
+      "payloadSHA256": "c87f675280a605f07c3ac726cf890a9647415b6a98236ebe64a7360b446ecb24",
+      "standardZlib": true
+    },
+    {
+      "id": "original_length_anchors",
+      "bytes": 11779416,
+      "payloadSHA256": "48fea7e28388b6f8022672645320e8fd6de567b830b5ddc71df6b59ec8cac109",
+      "standardZlib": true
+    },
+    {
+      "id": "original_headerguided",
+      "bytes": 11779452,
+      "payloadSHA256": "bbfb1999beabf5fada3746107f157a791d57f536876553dd8285907e1f9b60c2",
+      "standardZlib": true
+    },
+    {
+      "id": "original_runaware",
+      "bytes": 11775423,
+      "payloadSHA256": "dc6bcc7940141b734f0743b1622b6ddf4be5d445eee6797bac20de463fb90f0e",
+      "standardZlib": true
+    },
+    {
+      "id": "original_distance0",
+      "bytes": 11779452,
+      "payloadSHA256": "195610414f24ca1836d17aced0584606188b681c8b119acf3004baa4bbb9f6df",
+      "standardZlib": true
+    },
+    {
+      "id": "original_length0",
+      "bytes": 11778954,
+      "payloadSHA256": "5ee09fee333f9d5f17c8f035ff29c6ff2341a702df0090728c3d37d5ab4448e9",
+      "standardZlib": true
+    },
+    {
+      "id": "original_islands_headerguided",
+      "bytes": 11778797,
+      "payloadSHA256": "c41d85f7bf7c7eb3db9207fc4bfb85183b16431ce93af1dde2d701a56197eeca",
+      "standardZlib": true
+    },
+    {
+      "id": "original_conservative",
+      "bytes": 11774806,
+      "payloadSHA256": "949d1efb15956a5ade504b9984a7645b0712b2e6a0fdd13fd5d9e53574d9af19",
+      "standardZlib": true
+    },
+    {
+      "id": "original_more_CR_repairs",
+      "bytes": 11734447,
+      "payloadSHA256": "69f002f0754bee6c802ccde015908db55eb2b639b3c25f3b1be8afcc6684f781",
+      "standardZlib": true
+    },
+    {
+      "id": "community_combined",
+      "bytes": 11777840,
+      "payloadSHA256": "3245e6d141e68d4ee3b2a49b52df688438d947323e200a8697ffc0974c597365",
+      "standardZlib": true
+    },
+    {
+      "id": "community_copy_context",
+      "bytes": 11777876,
+      "payloadSHA256": "131c60b0ce978138b3cf07b6f83d6a584935bd5db18a7fee60e9860c50e30f68",
+      "standardZlib": true
+    },
+    {
+      "id": "community_length_anchors",
+      "bytes": 11777840,
+      "payloadSHA256": "537b31a1ea2068a5bb73a007384c27bdb9d8905952220d3be462f93c0a1add1b",
+      "standardZlib": true
+    },
+    {
+      "id": "community_headerguided",
+      "bytes": 11777876,
+      "payloadSHA256": "5ccdc50eb848773a206ae08becad0674cca025a33500222364c5c3a3a7715477",
+      "standardZlib": true
+    },
+    {
+      "id": "community_runaware",
+      "bytes": 11773847,
+      "payloadSHA256": "51ea0c8c39f85278ed82b018e3cb9f355441eb81c2477071dcf0633436c4969a",
+      "standardZlib": true
+    },
+    {
+      "id": "community_distance0",
+      "bytes": 11777876,
+      "payloadSHA256": "c5f6c7a8991ee6d425f73c2a0b929bd7630223e024ab21ad8fec8446abd2b6f1",
+      "standardZlib": true
+    },
+    {
+      "id": "community_length0",
+      "bytes": 11777378,
+      "payloadSHA256": "773d7dd6ff9ca26ce89455d4ad5babe67e27774416492dbc8a6dbc443d7014ab",
+      "standardZlib": true
+    }
+  ],
+  "pixelChecks": [
+    {
+      "id": "original_combined",
+      "rgbaSHA256": "2b2af6d453063c388a72842a6f1564ae88cee1029b64e1d9ee530a8e22a5be2e"
+    },
+    {
+      "id": "original_copy_context",
+      "rgbaSHA256": "68ee008684f4540d60dbe6f1f13c8b68f4e879c3083e081817582f0d0245427b"
+    },
+    {
+      "id": "original_length_anchors",
+      "rgbaSHA256": "797d43211b67eee5cf94526da0b18f9a65bdb40cb45ff7e4d07552885f466fa3"
+    },
+    {
+      "id": "community_combined",
+      "rgbaSHA256": "f67cb38a221aac0a53e77e3192a31a8b8fed613e0170b28574f6bf36d0d34eaf"
+    },
+    {
+      "id": "community_copy_context",
+      "rgbaSHA256": "b96ab0c18d6299fa4b2e919a3c94fb14bcd4bb8081d837efc42ba435b59e245b"
+    },
+    {
+      "id": "community_length_anchors",
+      "rgbaSHA256": "c7b011be718a4009279b8ac023ecbb33f8ee05622bd803669f1c20c39e0fb728"
+    }
+  ],
+  "syntheticChecks": [
+    "PNG export: repeated RGBA rows and standard-zlib IDAT",
+    "DEFLATE {\"level\":0}",
+    "DEFLATE {\"level\":6,\"strategy\":4}",
+    "DEFLATE {\"level\":6}",
+    "DEFLATE {\"level\":9}",
+    "Preset dictionary, including overlapping copies",
+    "Conditional LZW prefix: 16 codes / 68 indices",
+    "PNG filter 0 and prior-row crop",
+    "PNG filter 1 and prior-row crop",
+    "PNG filter 2 and prior-row crop",
+    "PNG filter 3 and prior-row crop",
+    "PNG filter 4 and prior-row crop",
+    "Live copy-context search reproduces v5 A: 1,005 distance edits",
+    "Sample layout u16le",
+    "Sample layout u16be",
+    "Sample layout p1",
+    "Sample layout p2",
+    "Sample layout p4"
+  ],
+  "passed": true
+}

@@ -1,0 +1,8 @@
+{
+  "name": "saf-byte-workbench",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/core.test.mjs"
+  }
+}

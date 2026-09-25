@@ -1,0 +1,10 @@
+{
+  "format": "saf-byte-workbench",
+  "version": 1,
+  "settings": {
+    "source": "original",
+    "candidate": "more_CR_repairs"
+  },
+  "dictionary": null,
+  "localBytes": null
+}

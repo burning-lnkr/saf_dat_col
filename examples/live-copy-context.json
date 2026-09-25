@@ -1,0 +1,11 @@
+{
+  "format": "saf-byte-workbench",
+  "version": 1,
+  "settings": {
+    "candidate": "headerguided",
+    "distancePolicy": "context",
+    "modelKind": "recorded"
+  },
+  "dictionary": null,
+  "localBytes": null
+}

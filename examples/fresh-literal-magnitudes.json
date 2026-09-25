@@ -1,0 +1,10 @@
+{
+  "format": "saf-byte-workbench",
+  "version": 1,
+  "settings": {
+    "selection": "fresh",
+    "mode": "magnitude"
+  },
+  "dictionary": null,
+  "localBytes": null
+}

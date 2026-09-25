@@ -1,0 +1,1 @@
+Open these files with **Open setup**. Each starts from the default settings and applies only the recorded overrides. The piecewise example applies the prior 65–245-row geometric fit to the header-guided candidate.

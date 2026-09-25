@@ -1,0 +1,9 @@
+{
+  "format": "saf-byte-workbench",
+  "version": 1,
+  "settings": {
+    "mode": "shared"
+  },
+  "dictionary": null,
+  "localBytes": null
+}

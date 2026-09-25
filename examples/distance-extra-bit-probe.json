@@ -1,0 +1,12 @@
+{
+  "format": "saf-byte-workbench",
+  "version": 1,
+  "settings": {
+    "candidate": "headerguided",
+    "distancePolicy": "random",
+    "seed": 17,
+    "rate": 25
+  },
+  "dictionary": null,
+  "localBytes": null
+}
