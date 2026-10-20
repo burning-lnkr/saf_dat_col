@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import zlib from 'node:zlib';
+import {inverseUTF8,prepareStream,inflate} from '../js/codec.js';
+const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url'));
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const raw=read('data/saf_dat_col.utf8.bin');
+const index=JSON.parse(read('data/index.json'));
+const recipe=JSON.parse(read('data/original_headerguided.json'));
+const prep=prepareStream(inverseUTF8(raw),new Uint8Array(read('data/community.bin')),index,recipe);
+const dec=inflate(prep);
+if(dec.error)throw new Error(dec.error);
+const native=zlib.inflateRawSync(dec.stream,{dictionary:Buffer.alloc(32768)});
+if(!native.equals(Buffer.from(dec.bytes)))throw new Error('native inflate mismatch');
+const hist=Array(256).fill(0);for(const b of dec.bytes)hist[b]++;
+const report={source_sha256:sha(raw),recipe_sha256:sha(read('data/original_headerguided.json')),prepared_sha256:sha(dec.stream),decoded_sha256:sha(dec.bytes),decoded_bytes:dec.bytes.length,blocks:dec.blocks.length,source_literal_range:'Retained header support: -10..10; does not bound copied history',magnitude_counts:Object.fromEntries(Array.from({length:11},(_,k)=>[k,k===0?hist[0]:hist[k]+hist[256-k]])),copy_and_layout_warning:'Nominal decoded bytes are not authenticated PNG scanlines or RGB pixels.'};
+console.log(JSON.stringify(report,null,2));
