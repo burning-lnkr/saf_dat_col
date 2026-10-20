@@ -1,0 +1,40 @@
+{
+  "baselineRecipe": "data/original_headerguided.json",
+  "block": 1,
+  "removeCR": 9624,
+  "insertCR": 9618,
+  "source": {
+    "block": 1,
+    "streamBit": 77153,
+    "synthetic": false,
+    "preparedStreamByte": 9645,
+    "preparedByte": 9624,
+    "bit": 0,
+    "inverseByte": 70711,
+    "uploadedByte": 109442,
+    "communityByte": 62967,
+    "inserted": true,
+    "flags": 1,
+    "unmappedInverse": false,
+    "observedInverseValue": 39,
+    "rawPreparedValue": 39,
+    "preparedValue": 13
+  },
+  "target": {
+    "block": 1,
+    "streamBit": 77105,
+    "synthetic": false,
+    "preparedStreamByte": 9639,
+    "preparedByte": 9618,
+    "bit": 0,
+    "inverseByte": 70705,
+    "uploadedByte": 109431,
+    "communityByte": 62961,
+    "inserted": false,
+    "flags": 0,
+    "unmappedInverse": false,
+    "observedInverseValue": 87,
+    "rawPreparedValue": 87,
+    "preparedValue": 87
+  }
+}

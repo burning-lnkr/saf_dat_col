@@ -1,0 +1,18 @@
+PASS original_combined
+PASS original_copy_context
+PASS original_length_anchors
+PASS original_headerguided
+PASS original_runaware
+PASS original_distance0
+PASS original_length0
+PASS original_islands_headerguided
+PASS original_conservative
+PASS original_more_CR_repairs
+PASS community_combined
+PASS community_copy_context
+PASS community_length_anchors
+PASS community_headerguided
+PASS community_runaware
+PASS community_distance0
+PASS community_length0
+ALL TESTS PASSED

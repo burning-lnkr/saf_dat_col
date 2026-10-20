@@ -1,0 +1,6 @@
+{
+  "change": "Apply the existing16777216-byte cap to literal emissions as well as matches.",
+  "all78_results_byte_identical": true,
+  "scores_sha256": "060d6f4c3722007d0c809cba6edea2cf79925408a26a1cb762216a747e2fbea3",
+  "source_sha256": "a031fa6779215026637f6ac17473e3af821310801154eddb7d0e52f0e52c8dc2"
+}

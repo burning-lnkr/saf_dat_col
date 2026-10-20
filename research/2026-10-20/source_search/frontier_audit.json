@@ -1,0 +1,26 @@
+{
+  "scope": "Exploratory frontier audit chosen after the complete single-flip sweep; not part of the preregistered average-rate shortlist. Frozen before blocks2\u20134 evaluation and full native replay.",
+  "reason": "Unique eligible first-half candidate advancing the earliest endpoint from bit10110 to12488; structural DD-symbol reparse.",
+  "candidate": {
+    "id": 1,
+    "bit": 10062,
+    "field": "distance_huffman_symbol",
+    "source": {
+      "block": 1,
+      "streamBit": 10062,
+      "inverseByte": 62343,
+      "uploadedByte": 96107,
+      "communityByte": 54599,
+      "bit": 5,
+      "inserted": false,
+      "preparedByte": 1256
+    },
+    "baseline_token": 641,
+    "baseline_symbol": 265,
+    "baseline_length": 11,
+    "baseline_distance": 13405,
+    "baseline_token_bit": 10059,
+    "baseline_token_end": 10077
+  },
+  "original_shortlist_sha256": "ab071a578c8af9cd5027ef35d9d66a01d242de2762cab809c55e8c7c9d1bf41e"
+}

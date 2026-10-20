@@ -1,0 +1,210 @@
+{
+  "scope": "Fixed chosen parses with arbitrary initial dictionary tags. Later source is untouched but history-dependent; counts are not statistically independent validation. No pixel/image optimization.",
+  "eligible": 77,
+  "valid": 77,
+  "excluded_distance_extra_bits": 147,
+  "candidate_field_counts": {
+    "distance_huffman_symbol": 45,
+    "length_extra_bits": 16,
+    "literal_or_length_huffman_symbol": 16
+  },
+  "token_delta_histogram": {
+    "-7": 1,
+    "-3": 2,
+    "-2": 5,
+    "-1": 6,
+    "0": 53,
+    "1": 3,
+    "2": 2,
+    "3": 1,
+    "4": 2,
+    "6": 2
+  },
+  "source_shortlist_and_exploratory": [
+    {
+      "id": 0,
+      "selection": "baseline",
+      "train": {
+        "endpoint_equalities": 394,
+        "cheaper_absorptions": 157,
+        "same_symbol_absorptions": 55,
+        "tested": 12279,
+        "known_endpoint_comparisons": 2004,
+        "unresolved_endpoint_comparisons": 10255,
+        "known_output_bytes": 45813,
+        "output_bytes": 156966
+      },
+      "untouched_second_half": {
+        "endpoint_equalities": 994,
+        "cheaper_absorptions": 445,
+        "same_symbol_absorptions": 144,
+        "tested": 12102,
+        "known_endpoint_comparisons": 3504,
+        "unresolved_endpoint_comparisons": 8577,
+        "known_output_bytes": 72885,
+        "output_bytes": 151884
+      },
+      "untouched_blocks2to4": {
+        "endpoint_equalities": 14907,
+        "cheaper_absorptions": 4577,
+        "same_symbol_absorptions": 1532,
+        "tested": 72348,
+        "known_endpoint_comparisons": 53799,
+        "unresolved_endpoint_comparisons": 18431,
+        "known_output_bytes": 944904,
+        "output_bytes": 1104175
+      },
+      "output_delta": 0,
+      "token_delta": 0,
+      "all_ll_dd_trees_compatible": true
+    },
+    {
+      "id": 16,
+      "selection": "preregistered_training_shortlist",
+      "train": {
+        "endpoint_equalities": 381,
+        "cheaper_absorptions": 155,
+        "same_symbol_absorptions": 56,
+        "tested": 12279,
+        "known_endpoint_comparisons": 2021,
+        "unresolved_endpoint_comparisons": 10241,
+        "known_output_bytes": 46011,
+        "output_bytes": 156965
+      },
+      "untouched_second_half": {
+        "endpoint_equalities": 999,
+        "cheaper_absorptions": 447,
+        "same_symbol_absorptions": 151,
+        "tested": 12102,
+        "known_endpoint_comparisons": 3460,
+        "unresolved_endpoint_comparisons": 8625,
+        "known_output_bytes": 72887,
+        "output_bytes": 151884
+      },
+      "untouched_blocks2to4": {
+        "endpoint_equalities": 14984,
+        "cheaper_absorptions": 4605,
+        "same_symbol_absorptions": 1552,
+        "tested": 72348,
+        "known_endpoint_comparisons": 54281,
+        "unresolved_endpoint_comparisons": 17946,
+        "known_output_bytes": 949838,
+        "output_bytes": 1104175
+      },
+      "output_delta": -1,
+      "token_delta": 0,
+      "all_ll_dd_trees_compatible": true
+    },
+    {
+      "id": 60,
+      "selection": "preregistered_training_shortlist",
+      "train": {
+        "endpoint_equalities": 384,
+        "cheaper_absorptions": 140,
+        "same_symbol_absorptions": 51,
+        "tested": 12279,
+        "known_endpoint_comparisons": 2020,
+        "unresolved_endpoint_comparisons": 10238,
+        "known_output_bytes": 45970,
+        "output_bytes": 156965
+      },
+      "untouched_second_half": {
+        "endpoint_equalities": 1002,
+        "cheaper_absorptions": 429,
+        "same_symbol_absorptions": 154,
+        "tested": 12102,
+        "known_endpoint_comparisons": 3523,
+        "unresolved_endpoint_comparisons": 8564,
+        "known_output_bytes": 73652,
+        "output_bytes": 151884
+      },
+      "untouched_blocks2to4": {
+        "endpoint_equalities": 15030,
+        "cheaper_absorptions": 4668,
+        "same_symbol_absorptions": 1584,
+        "tested": 72348,
+        "known_endpoint_comparisons": 55605,
+        "unresolved_endpoint_comparisons": 16641,
+        "known_output_bytes": 970469,
+        "output_bytes": 1104175
+      },
+      "output_delta": -1,
+      "token_delta": 0,
+      "all_ll_dd_trees_compatible": true
+    },
+    {
+      "id": 73,
+      "selection": "preregistered_training_shortlist",
+      "train": {
+        "endpoint_equalities": 382,
+        "cheaper_absorptions": 140,
+        "same_symbol_absorptions": 49,
+        "tested": 12279,
+        "known_endpoint_comparisons": 2032,
+        "unresolved_endpoint_comparisons": 10226,
+        "known_output_bytes": 45945,
+        "output_bytes": 156965
+      },
+      "untouched_second_half": {
+        "endpoint_equalities": 992,
+        "cheaper_absorptions": 427,
+        "same_symbol_absorptions": 150,
+        "tested": 12102,
+        "known_endpoint_comparisons": 3508,
+        "unresolved_endpoint_comparisons": 8580,
+        "known_output_bytes": 73839,
+        "output_bytes": 151884
+      },
+      "untouched_blocks2to4": {
+        "endpoint_equalities": 14993,
+        "cheaper_absorptions": 4656,
+        "same_symbol_absorptions": 1583,
+        "tested": 72348,
+        "known_endpoint_comparisons": 55428,
+        "unresolved_endpoint_comparisons": 16818,
+        "known_output_bytes": 968185,
+        "output_bytes": 1104175
+      },
+      "output_delta": -1,
+      "token_delta": 0,
+      "all_ll_dd_trees_compatible": true
+    },
+    {
+      "id": 1,
+      "selection": "exploratory_frontier_audit",
+      "train": {
+        "endpoint_equalities": 413,
+        "cheaper_absorptions": 168,
+        "same_symbol_absorptions": 61,
+        "tested": 12278,
+        "known_endpoint_comparisons": 2081,
+        "unresolved_endpoint_comparisons": 10175,
+        "known_output_bytes": 47000,
+        "output_bytes": 156987
+      },
+      "untouched_second_half": {
+        "endpoint_equalities": 1004,
+        "cheaper_absorptions": 449,
+        "same_symbol_absorptions": 144,
+        "tested": 12102,
+        "known_endpoint_comparisons": 3562,
+        "unresolved_endpoint_comparisons": 8520,
+        "known_output_bytes": 73539,
+        "output_bytes": 151884
+      },
+      "untouched_blocks2to4": {
+        "endpoint_equalities": 14945,
+        "cheaper_absorptions": 4585,
+        "same_symbol_absorptions": 1533,
+        "tested": 72348,
+        "known_endpoint_comparisons": 54049,
+        "unresolved_endpoint_comparisons": 18182,
+        "known_output_bytes": 947162,
+        "output_bytes": 1104175
+      },
+      "output_delta": 21,
+      "token_delta": 2,
+      "all_ll_dd_trees_compatible": true
+    }
+  ]
+}

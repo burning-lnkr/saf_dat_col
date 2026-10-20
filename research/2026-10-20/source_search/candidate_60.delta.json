@@ -1,0 +1,16 @@
+{
+  "base_recipe": "data/original_headerguided.json",
+  "block": 1,
+  "nul_add": [
+    24025
+  ],
+  "nul_remove": [],
+  "stream_xor_bits": [
+    192734
+  ],
+  "observed_uploaded_byte": 132127,
+  "observed_uploaded_value": 32,
+  "prior_interpretation": 32,
+  "new_interpretation": 0,
+  "selection": "preregistered_training_shortlist"
+}

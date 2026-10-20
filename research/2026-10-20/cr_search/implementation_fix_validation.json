@@ -1,0 +1,7 @@
+{
+  "change": "Enforce16MiB cap on literal emissions as well as matches",
+  "unchangedFullScreeningOutput": true,
+  "scoresSha256": "f4fd36844dc377e2cffd9708e2446f74de0efda92679d2adcac6dfb76d38b0bf",
+  "scorerSha256": "a031fa6779215026637f6ac17473e3af821310801154eddb7d0e52f0e52c8dc2",
+  "candidateRecordsIncludingIdentity": 1759
+}

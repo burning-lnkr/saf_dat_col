@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "byte_order": "little-endian",
+  "indices": "Token, byte and bit indices are zero-based. Block numbers are one-based. Ranges are end-exclusive. Bits within bytes are LSB-first.",
+  "cache": "research/2026-10-20/cache/baseline",
+  "token_arrays": {
+    "uint32": ["start", "bit", "end", "lbit", "dbit"],
+    "uint16": ["symbol", "length", "distance", "lmask", "dmask", "block"],
+    "uint8": ["dsym"],
+    "filename_pattern": "token_NAME.bin",
+    "extra_field_starts": "lbit/dbit point after the relevant Huffman code, to the first extra bit. Nonmatching token entries are zero.",
+    "eob": "symbol256, length0, distance0; emits no output"
+  },
+  "per_output_arrays": {
+    "bytes.bin": "uint8 nominal output with zero incoming dictionary",
+    "fresh.bin": "uint8: directly emitted literal1, copied byte0",
+    "origins.bin": "int32: nonnegative literal token index; negative initial dictionary coordinate",
+    "tags.bin": "int32: known byte value0..255; unknown initial dictionary coordinate-32768..-1",
+    "tags.i32": "identical alias of tags.bin"
+  },
+  "history_identity": "-k means dictionary index32768-k. Equality of negative identities is invariant to dictionary values; inequality of identities does not prove unequal byte values.",
+  "ambiguities.u32": "uint32 sorted global stream bit coordinates of observed-space bit5 alternatives retained in block bodies",
+  "inverse.bin": "uint8 CP1252-style inverse conversion used by the app",
+  "inverse_offsets.u32": "uint32 starting UTF-8 capture byte coordinate for each inverse codepoint",
+  "inverse_unmapped.u8": "uint8:1 when the inverse conversion substituted '?' for an unsupported codepoint",
+  "part_fields": {
+    "start": "global assembled stream bit start",
+    "end": "global assembled stream bit end, including a synthetic EOB if present",
+    "sourceEnd": "global retained-source bit end before a synthetic EOB",
+    "headerBit": "first retained bit inside the block's post-insertion prepared byte array",
+    "originalStart": "original inverse byte block start",
+    "originalEnd": "original inverse byte block end before removals",
+    "preparedHeaderBodyBit": "local prepared-stream body bit start",
+    "retainedPreparedEndBit": "local prepared-stream retained bit end after CR insertion",
+    "files": "paths relative to the cache directory"
+  },
+  "part_arrays": {
+    "rawPrepared": "uint8 source after header patch/insertion and removals, before body NUL/CR choices; recipe prepared coordinates index this array",
+    "rawMap": "int32 original inverse coordinate per rawPrepared byte; inserted header byte encoded as-anchor-1",
+    "preparedBytes": "uint8 after body NUL/CR choices; before global BFINAL and stream XOR edits",
+    "map": "int32 original inverse coordinate per preparedBytes byte; inserted byte encoded as-anchor-1",
+    "prep": "uint32 rawPrepared index per preparedBytes byte",
+    "preparedFlags": "uint8 provenance bit flags; not a source-authentication mask"
+  },
+  "prepared_flags": {
+    "1": "body CR insertion",
+    "2": "header CR insertion",
+    "4": "header byte patch",
+    "8": "chosen NUL substitution",
+    "16": "unsupported Unicode codepoint in inverse conversion"
+  },
+  "source_mapping": "For retained global stream bit b: q=b-part.start+part.headerBit; j=q>>3; maps indexed by j; inverse/prepared bit=q&7. UTF-8 uploadedByte denotes a codepoint start, not an equivalent raw source bit.",
+  "diagnostics": "Nominal selected distances only. First/final data tokens and L258 excluded from endpoint count. Same-symbol absorption requires contiguous following literal and canonical same length-symbol range. No all-distance-selector proof is claimed."
+}

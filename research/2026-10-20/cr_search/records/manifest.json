@@ -1,0 +1,18 @@
+[
+  {
+    "source": "candidates.json",
+    "archive": "records/candidates.json.gz",
+    "uncompressedBytes": 3160220,
+    "sha256": "db5a4be220a65f83bf245c9e4b3c1f5b1bb76079c053a42ffa5121c26f9da6c5",
+    "archiveBytes": 190422,
+    "archiveSha256": "467d287198ca74f07d09255c975dc87f79b4b675819cdcc2cfce66ebc7380d15"
+  },
+  {
+    "source": "scores.jsonl",
+    "archive": "records/scores.jsonl.gz",
+    "uncompressedBytes": 4034214,
+    "sha256": "f4fd36844dc377e2cffd9708e2446f74de0efda92679d2adcac6dfb76d38b0bf",
+    "archiveBytes": 230160,
+    "archiveSha256": "4285954438b74058a16a74a119f940d9f33b9256b0e7e1d2a6a941c6381dcb62"
+  }
+]

@@ -2,3 +2,6 @@ tests/browser-artifacts/
 __pycache__/
 node_modules/
 .DS_Store
+research/**/cache/
+research/2026-10-20/cr_search/candidates.json
+research/2026-10-20/cr_search/scores.jsonl

@@ -1,0 +1,11 @@
+{
+  "scope": "Frozen before decoding blocks2\u20134; later source is untouched but decoded history may change, so continuation is not statistically independent.",
+  "hashes": {
+    "protocol.json": "4663170888daff79342faeaea16f850707a47b55b5f4967d4741731babbeb6a5",
+    "candidates.json": "8633d129fe21ab8c1c7c3858a22b6aefc4e2604722223519bef0d4480ac6b98f",
+    "candidates.tsv": "4772e290bc945df18c0daeb441c5f41e1f71d445fa6ad17a9388766f5111804b",
+    "scores.jsonl": "060d6f4c3722007d0c809cba6edea2cf79925408a26a1cb762216a747e2fbea3",
+    "shortlist.json": "ab071a578c8af9cd5027ef35d9d66a01d242de2762cab809c55e8c7c9d1bf41e",
+    "shortlist.tsv": "c31e16e1b2d03e471d5105045349002ac3e8e081475c4f9b5b9d7000be03f704"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "experiment": "actual-source symbol and length ambiguity reparsing",
+  "baseline_recipe": "data/original_headerguided.json",
+  "frozen_before_candidate_scoring": true,
+  "source_policy": "Only a captured literal space's NUL/space bit5 choice may change. No CR movement, source removal, header replacement, endpoint movement, or arbitrary byte edit is allowed in this arm.",
+  "candidate_domain": {
+    "block": 1,
+    "source_region": "First half of the retained block1 body bit interval, using floor((body+endBit)/2).",
+    "flip_count": 1,
+    "allowed_baseline_fields": ["literal_or_length_huffman_symbol", "length_extra_bits", "distance_huffman_symbol"],
+    "excluded": ["distance_extra_bits_only", "headers", "inserted_bytes", "synthetic_end_bits", "non-space_source_bytes"],
+    "enumeration": "Every eligible prepared ambiguity bit in ascending stream-bit order, plus identity. No image score or previously successful bit is used to select the domain."
+  },
+  "hard_checks": [
+    "No invalid Huffman symbol or distance beyond available 32768-byte initial history.",
+    "Every parsed EOB must end at the unchanged retained source block endpoint.",
+    "Headers and all nonselected stream bits remain byte/bit identical.",
+    "A bounded decoder output limit of16777216 bytes for the scored blocks; cap failures are recorded, not scored as valid."
+  ],
+  "dictionary_model": "32768 distinct unknown initial-byte tags; literal values0..255 are constants. Equality is counted only for equal tags or equal constants. Different unknown tags are unresolved, not assumed unequal original bytes.",
+  "diagnostics": [
+    "Nonterminal, nonfirst matches shorter than258 ending at a provably equal next byte; conditional ordinary-zlib diagnostic, not DEFLATE validity.",
+    "Provably equal endpoint followed by a literal that can be absorbed more cheaply under the unchanged header.",
+    "The subset retaining the same length symbol; exact saved bits.",
+    "Token count, output length, Huffman-frequency compatibility, first source-token resynchronization, known-byte and known-endpoint coverage."
+  ],
+  "selection": {
+    "training": "First source half of block1 only.",
+    "shortlists": [
+      "Best2 valid candidates by cheaper-absorption count / tested matches.",
+      "Best2 valid candidates by equal-endpoint count / tested matches.",
+      "Best1 valid candidate by same-length-symbol absorption count / tested matches."
+    ],
+    "tie_breaks": ["smaller absolute output-byte delta", "smaller source bit"],
+    "union": "Deduplicate the three lists, retain identity separately, and retain every scored candidate in the results. Ranking is diagnostic only."
+  },
+  "untouched_evaluation": {
+    "regions": ["Second source half of block1", "Entire blocks2,3,4"],
+    "policy": "Freeze shortlist before evaluating blocks2–4. Report all shortlisted outcomes, including regressions; do not use heldout results to choose a new winner.",
+    "verification": "Reprepare each shortlisted change as a recipe.blocks[0].nul toggle, compare exact wire against the one-bit patch, independently inflate using repository codec and native zlib with zero and nonconstant dictionaries, and check unchanged source endpoints/headers and later token continuity."
+  },
+  "interpretation": "A score decrease is not restored-source authentication or image recovery. Unknown-history coverage and encoder assumptions remain explicit."
+}

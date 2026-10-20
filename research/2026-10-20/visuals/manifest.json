@@ -1,0 +1,307 @@
+{
+  "scope": "Provisional interpretations of the supplied damaged capture; no verified original image or recognizable recovery is asserted.",
+  "geometry": "Unverified width5000/RGB8/stride15001/prefix1 hypothesis; rows785. Every case uses identical settings. Unknown initial-history bytes are zero-filled for display.",
+  "preview": "Overview uses area averaging at preserved aspect before repeating preview rows four times. A separate fixed crop retains native pixels. Native PNGs contain unscaled pixels.",
+  "config": {
+    "width": 5000,
+    "channels": 3,
+    "sample": "u8",
+    "arrangement": "interleaved",
+    "stride": 15001,
+    "prefix": 1,
+    "offset": 0,
+    "startRow": 0,
+    "rows": 785,
+    "tail": "drop",
+    "filterSeed": "00",
+    "filterReset": 0,
+    "filterOverrides": "",
+    "filterBpp": 3,
+    "selection": "all",
+    "repeat": 1,
+    "smoothX": 1,
+    "smoothY": 1
+  },
+  "views": [
+    {
+      "key": "magnitude_classes",
+      "title": "Magnitude classes",
+      "settings": {
+        "filter": "off",
+        "mode": "classifier",
+        "magnitudeA": 7,
+        "magnitudeB": 4,
+        "valueA": 255,
+        "valueB": 60,
+        "valueOther": 0
+      }
+    },
+    {
+      "key": "raw_rgb",
+      "title": "Bytes treated as RGB",
+      "settings": {
+        "filter": "off",
+        "mode": "rawrgb"
+      }
+    },
+    {
+      "key": "sub_rgb",
+      "title": "RGB after fixed Sub inverse",
+      "settings": {
+        "filter": "1",
+        "mode": "rawrgb"
+      }
+    },
+    {
+      "key": "paeth_rgb",
+      "title": "RGB after fixed Paeth inverse",
+      "settings": {
+        "filter": "4",
+        "mode": "rawrgb"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "key": "baseline",
+      "title": "Baseline",
+      "detail": "Original Header-guided recipe; nominal zero history",
+      "folder": "research/2026-10-20/cache/baseline",
+      "native": true,
+      "outputBytes": 11779452,
+      "outputSha256": "bbfb1999beabf5fada3746107f157a791d57f536876553dd8285907e1f9b60c2",
+      "images": [
+        {
+          "view": "magnitude_classes",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/baseline_magnitude_classes.png",
+          "published": "research/2026-10-20/visuals/baseline_magnitude_classes.png",
+          "cacheSha256": "c68d3473314320e2de1487b8eab6ef31b0be963c940b62e4f110e51cf393a864",
+          "cacheBytes": 1170385,
+          "publishedPngSha256": "c68d3473314320e2de1487b8eab6ef31b0be963c940b62e4f110e51cf393a864",
+          "publishedPngBytes": 1170385
+        },
+        {
+          "view": "raw_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/baseline_raw_rgb.png",
+          "published": null,
+          "cacheSha256": "be024dfa1263fc2119880d8c5a9d088e1db2882a53f4dca2c35231cdc6355aef",
+          "cacheBytes": 1751881
+        },
+        {
+          "view": "sub_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/baseline_sub_rgb.png",
+          "published": "research/2026-10-20/visuals/baseline_sub_rgb.png",
+          "cacheSha256": "c47b1fc62d3c6568bc7019a12c2f0e217ec7239e3ff507d4d1ca535b174a3a7b",
+          "cacheBytes": 8215337,
+          "publishedPngSha256": "70458e84e93b88cdb67d3f831e209871f5733439173f5b611c210397fac4d878",
+          "publishedPngBytes": 1170612
+        },
+        {
+          "view": "paeth_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/baseline_paeth_rgb.png",
+          "published": null,
+          "cacheSha256": "ee05d8ac2a559b292a9d911617fbd5c6ae940bae22f9bd2876bf6823be0e6ff5",
+          "cacheBytes": 8556624
+        }
+      ]
+    },
+    {
+      "key": "length_16",
+      "title": "Length alternative 16",
+      "detail": "One NUL/space choice; length 12 to 11; output -1 byte",
+      "folder": "research/2026-10-20/cache/source_search/candidate_16",
+      "outputBytes": 11779451,
+      "outputSha256": "8cce7f4711bd479ba1e0a1e1fb96d40e58717594999ae6581fe80929d335dcbd",
+      "images": [
+        {
+          "view": "magnitude_classes",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/length_16_magnitude_classes.png",
+          "published": null,
+          "cacheSha256": "90a621eaa53f0a61967adfc05e31b9f25c55162f185a322f56e1baa48d3b8907",
+          "cacheBytes": 1171694
+        },
+        {
+          "view": "raw_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/length_16_raw_rgb.png",
+          "published": null,
+          "cacheSha256": "dff51422dc78c7cc3c2ee1c2d9fa9f9e3e02c310f292e05e3651970805a0722c",
+          "cacheBytes": 1753205
+        },
+        {
+          "view": "sub_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/length_16_sub_rgb.png",
+          "published": null,
+          "cacheSha256": "71e657c892eaee85aa3bab06d87b4d6f9b374763f41160f5172ae463e41d2176",
+          "cacheBytes": 8223136
+        },
+        {
+          "view": "paeth_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/length_16_paeth_rgb.png",
+          "published": null,
+          "cacheSha256": "d624eb9b78ebeadb8d2ec44a64a1d269cadaaa4ce690c5a4161dc87b2fc7bf3a",
+          "cacheBytes": 8592604
+        }
+      ]
+    },
+    {
+      "key": "symbol_1",
+      "title": "Symbol alternative 1",
+      "detail": "Exploratory bit 10062; 16 tokens become 18; output +21 bytes",
+      "folder": "research/2026-10-20/cache/source_search/candidate_1",
+      "native": true,
+      "outputBytes": 11779473,
+      "outputSha256": "050dffdc910f877e6d812675e881351a917cf3c03bb33bd5043176014ffa542f",
+      "images": [
+        {
+          "view": "magnitude_classes",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/symbol_1_magnitude_classes.png",
+          "published": null,
+          "cacheSha256": "a2f5ed319d8f1e6f8b4f750103e090106efa26ae8b2a2b0f3212f94577d0bfe0",
+          "cacheBytes": 1170511
+        },
+        {
+          "view": "raw_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/symbol_1_raw_rgb.png",
+          "published": null,
+          "cacheSha256": "b3cfb5e2d37b14b760cd78799d2d963235b56dd07ccf82518ad38569e3c773f8",
+          "cacheBytes": 1753323
+        },
+        {
+          "view": "sub_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/symbol_1_sub_rgb.png",
+          "published": "research/2026-10-20/visuals/symbol_1_sub_rgb.png",
+          "cacheSha256": "6e51a9396e880a063fbf6e6f6f5787fbbaa1dd6a8ef1ed614a23e94885de7c73",
+          "cacheBytes": 8225301,
+          "publishedPngSha256": "86df463672068a74c6aedf67a3ce6e24e0df64f46475ee9641acc28e16e8b7c8",
+          "publishedPngBytes": 1170690
+        },
+        {
+          "view": "paeth_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/symbol_1_paeth_rgb.png",
+          "published": null,
+          "cacheSha256": "1c1c7d3ea67630a2619936de318bdc4b9bf3c9f8b4af0596ac76a2db86b72333",
+          "cacheBytes": 8576769
+        }
+      ]
+    },
+    {
+      "key": "cr_1244",
+      "title": "CR alternative 1244",
+      "detail": "Inserted CR 22964 to 22957; output +2 bytes",
+      "folder": "research/2026-10-20/cache/cr_search/candidate_1244",
+      "native": true,
+      "outputBytes": 11779454,
+      "outputSha256": "de80b395910a2d8cb703cc8776968f5e8a055abb37c898881ccef54bc507a1b2",
+      "images": [
+        {
+          "view": "magnitude_classes",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_1244_magnitude_classes.png",
+          "published": null,
+          "cacheSha256": "a69e99da59b685f7fb919944022948dbac530eef146e54c1b292cd829ac188aa",
+          "cacheBytes": 1172444
+        },
+        {
+          "view": "raw_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_1244_raw_rgb.png",
+          "published": null,
+          "cacheSha256": "ae9419b92f174305a29396d750ac1ddef484cb86be4a6644f4b4836a4b49ba93",
+          "cacheBytes": 1752888
+        },
+        {
+          "view": "sub_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_1244_sub_rgb.png",
+          "published": "research/2026-10-20/visuals/cr_1244_sub_rgb.png",
+          "cacheSha256": "79898c07c99147498c5b2e948af197a5bbec25176f4964c7965ff39cd331edba",
+          "cacheBytes": 8236101,
+          "publishedPngSha256": "f139f7686dcb6b668df63aba51bb2c10d39cdf2f5749e1591d09e9d82663645c",
+          "publishedPngBytes": 1170180
+        },
+        {
+          "view": "paeth_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_1244_paeth_rgb.png",
+          "published": null,
+          "cacheSha256": "c9295dd25da3941dbdc4ee627a5f41c7ce1bd14bed642c16a0c4df3da971c939",
+          "cacheBytes": 8516205
+        }
+      ]
+    },
+    {
+      "key": "cr_425",
+      "title": "CR alternative 425",
+      "detail": "Inserted CR 9624 to 9618; output -68 bytes",
+      "folder": "research/2026-10-20/cache/cr_search/candidate_425",
+      "outputBytes": 11779384,
+      "outputSha256": "40a98f9cf0f5844359b7c2fbe5c4d48fda349b8843eee8b02301d3877ee7fb87",
+      "images": [
+        {
+          "view": "magnitude_classes",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_425_magnitude_classes.png",
+          "published": null,
+          "cacheSha256": "f13b868afb3d2f898335c51d118b77b3339c3ebfcdd5e112de5f574851c4e625",
+          "cacheBytes": 1176627
+        },
+        {
+          "view": "raw_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_425_raw_rgb.png",
+          "published": null,
+          "cacheSha256": "946cb00d152db4bd3b08ff76f44f04f88952af5e5500aaa35b2321f5d97e2e71",
+          "cacheBytes": 1752832
+        },
+        {
+          "view": "sub_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_425_sub_rgb.png",
+          "published": null,
+          "cacheSha256": "de6b0f248e78c438fcf54d2a6b5898c23e0d1808726115e5fa298a065fb621cc",
+          "cacheBytes": 8248884
+        },
+        {
+          "view": "paeth_rgb",
+          "width": 5000,
+          "height": 785,
+          "cache": "research/2026-10-20/cache/visuals/cr_425_paeth_rgb.png",
+          "published": null,
+          "cacheSha256": "e98bc91c23b3f5a91f41eb82e776419f36967804b63c887fb1a24c8c514055a5",
+          "cacheBytes": 8600754
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "experiment": "Actual-source missing-CR placement alternatives",
+  "frozen_before_candidate_scoring": true,
+  "baseline_recipe": "data/original_headerguided.json",
+  "source_policy": "Move exactly one already inserted byte 13 to another insertion position. Preserve every captured source byte, the selected NUL/space substitutions, the number of inserted bytes, the selected headers, all other repair decisions and the retained block endpoint.",
+  "candidate_domain": {
+    "block": 1,
+    "source_region": "Both the original and replacement insertion positions, and their full changed bit interval, must lie within the first half of block1's retained body.",
+    "prepared_position_deltas": [-32, -16, -8, -7, -6, -5, -4, -3, -2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 16, 32],
+    "exclusions": ["positions already containing another inserted CR", "header bits", "positions outside the retained body", "synthetic endings"],
+    "enumeration": "Every eligible existing CR, in ascending prepared-source position, with every listed delta. Include identity. No visual or diagnostic score selects the search domain."
+  },
+  "hard_checks": [
+    "All nonselected captured bytes and chosen NUL substitutions remain unchanged.",
+    "The modified stream must parse without invalid symbols or impossible distances.",
+    "EOB must end at exactly the retained baseline source endpoint.",
+    "Output is capped at16777216 bytes during bounded scoring; capped candidates are failures.",
+    "Shortlisted wire patches must match full prepareStream output from a modified original repair recipe."
+  ],
+  "dictionary_model": "Distinct unknown tags for each of32768 initial-history bytes; known literal byte values are constants. Distinct unknown tags are unresolved. No equality is inferred from the nominal all-zero initial dictionary.",
+  "diagnostics": [
+    "Provable equal next-byte endpoints for nonfirst, nonterminal matches shorter than258.",
+    "Provably equal endpoint followed by an absorbable literal with strictly lower encoded bit cost, and its same-length-symbol subset.",
+    "Output length, token count, known-versus-unknown coverage, and first source-token resynchronization."
+  ],
+  "selection": {
+    "training": "First source half of block1.",
+    "shortlists": ["Best2 valid candidates by cheaper-absorption count / tested matches", "Best2 valid candidates by equal-endpoint count / tested matches", "Best1 valid candidate by same-symbol absorption count / tested matches"],
+    "tie_breaks": ["smaller absolute output-byte delta", "smaller absolute CR displacement", "smaller original prepared position", "smaller replacement prepared position"],
+    "union": "Deduplicate the lists. Preserve identity and the complete scored candidate table. Rankings are conditional encoder diagnostics, not image-recovery likelihoods."
+  },
+  "untouched_evaluation": {
+    "regions": ["Second source half of block1", "Entire blocks2,3,4"],
+    "policy": "Freeze shortlist before evaluating blocks2–4; report all shortlisted outcomes including regressions. Later source bytes are unchanged, but their decoded history can be affected by the earlier edit; this is a propagation check, not a statistically independent validation sample.",
+    "verification": "Reprepare shortlisted recipes, independently inflate with repository codec and native zlib under zero and nonconstant histories, and report output/token deltas and retained block endpoints."
+  },
+  "visual_policy": "If candidates are structurally valid and produce distinct output, show a small, fixed-scale comparison against baseline. Do not select by apparent shapes, optimize filters independently, or identify noise as an object. Raster width5000, RGB8, prefix1 and stride15001 remain unverified hypotheses."
+}
