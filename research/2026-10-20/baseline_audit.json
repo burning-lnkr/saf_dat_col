@@ -1,0 +1,11 @@
+{
+  "source_sha256": "53cd286fce00071b7a9b75ddbcec2f285d2e893718fc1226d5cea35fa4a6cd6c",
+  "recipe_sha256": "5144b002d0fae178c33f265c76d76fce02addd4f6997678fbe15bcf5f2e4b83d",
+  "prepared_sha256": "a10005bf746a70d9339b8069e83b677372d6d42530c6e221f8aec0b634604063",
+  "decoded_sha256": "bbfb1999beabf5fada3746107f157a791d57f536876553dd8285907e1f9b60c2",
+  "decoded_bytes": 11779452,
+  "blocks": 20,
+  "source_literal_range": "Retained header support: -10..10; does not bound copied history",
+  "magnitude_counts": {"0":1754126,"1":268924,"2":1187433,"3":279039,"4":6854364,"5":34640,"6":91028,"7":1290898,"8":10520,"9":1999,"10":6481},
+  "copy_and_layout_warning": "Nominal decoded bytes are not authenticated PNG scanlines or RGB pixels."
+}
