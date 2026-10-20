@@ -1,0 +1,46 @@
+{
+  "purpose": "Lossy navigation previews only; never analysis inputs. Original PNG boards are unchanged.",
+  "resampling": "Pillow Lanczos; width 1100, height rounded to preserve aspect ratio",
+  "previews": [
+    {
+      "source": "research/2026-10-20/visuals/source_interpretation_comparison.png",
+      "source_sha256": "d62a495f42ec13535ebad9c74fa993b972b7ac1bda21325794779a6d870e5352",
+      "source_dimensions": [
+        2680,
+        2790
+      ],
+      "output": "research/2026-10-20/visuals/source_interpretation_preview.jpg",
+      "output_dimensions": [
+        1100,
+        1145
+      ],
+      "quality": 50,
+      "subsampling": "4:2:0",
+      "progressive": true,
+      "output_sha256": "1bf7cffe73be9a10aa6fdef35339694b4d356f86186cb065157ebd1b7b202c02",
+      "output_bytes": 171252,
+      "visible_label": "LOSSY PREVIEW | RESAMPLED | NOT ANALYSIS INPUT",
+      "repository_status": "awaiting_explicit_approval_after_automatic_review"
+    },
+    {
+      "source": "research/2026-10-20/visuals/fixed_native_crops.png",
+      "source_sha256": "7c80d9db72ac55c87bc7d9008a23747786d6a3ce7e0e314508a5bd1980721dae",
+      "source_dimensions": [
+        2020,
+        1470
+      ],
+      "output": "research/2026-10-20/visuals/fixed_crops_preview.jpg",
+      "output_dimensions": [
+        1100,
+        800
+      ],
+      "quality": 50,
+      "subsampling": "4:2:0",
+      "progressive": true,
+      "output_sha256": "806e15ddef967b120b5e8e1eb9151ea3520724fc1b039d0e27932cd8f4301956",
+      "output_bytes": 173917,
+      "visible_label": "LOSSY PREVIEW | RESAMPLED | NOT ANALYSIS INPUT",
+      "repository_status": "included_in_commit"
+    }
+  ]
+}

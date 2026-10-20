@@ -5,3 +5,5 @@ node_modules/
 research/**/cache/
 research/2026-10-20/cr_search/candidates.json
 research/2026-10-20/cr_search/scores.jsonl
+research/2026-10-20/visuals/*.png
+research/2026-10-20/visuals/source_interpretation_preview.jpg

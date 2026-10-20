@@ -34,20 +34,19 @@ colors are irrecoverable, or that the assumed raster layout is correct.
 
 ## Images to inspect
 
-- [Full comparison sheet](visuals/source_interpretation_comparison.png).
-- [Fixed native-pixel crops](visuals/fixed_native_crops.png).
-- [Before: full native Sub/RGB view](visuals/baseline_sub_rgb.png).
-- [After alternative: source-symbol reparse](visuals/symbol_1_sub_rgb.png).
-- [After alternative: moved CR placement](visuals/cr_1244_sub_rgb.png).
-- [Baseline magnitude classes](visuals/baseline_magnitude_classes.png).
+- [Compact crop preview](visuals/fixed_crops_preview.jpg).
+- The six full-size PNGs accompany the chat response and are exactly
+  regenerable with the workflow below. Their filenames and pixel settings
+  are listed in [visuals/README.md](visuals/README.md).
 
-![Actual-data comparison](visuals/source_interpretation_comparison.png)
+![Compact, lossy navigation preview of the fixed-region comparisons](visuals/fixed_crops_preview.jpg)
 
 Native frames are 5000 × 785 pixels under the shared RGB8, stride-15001,
 prefix-one hypothesis. Unknown incoming history is zero-filled for display.
 These are not recovered PNG dimensions or filter metadata. The overview averages
 pixels and repeats preview rows vertically; native files retain the computed
-pixels. [Visual documentation](visuals/README.md) records every setting.
+pixels. The committed JPEG is a lossy navigation preview and is not an analysis
+input. [Visual documentation](visuals/README.md) records every setting.
 
 ## Restored evidence
 
@@ -165,11 +164,12 @@ bash research/2026-10-20/reproduce.sh
 ```
 
 Programs, frozen protocols, exact selected repair changes, complete score tables,
-proof records and review PNGs are preserved here. Large deterministic payloads,
+proof records and a compact crop preview are preserved here. Large deterministic payloads,
 ancestry arrays and intermediate renderings regenerate under ignored
 `research/2026-10-20/cache/`. The two large CR records are saved losslessly as
 gzip archives with uncompressed hashes. `deliverables.sha256` covers this pass's
-committed artifacts. The original inputs and application remain unchanged.
+committed artifacts; `visuals/manifest.json` records the separately delivered
+native PNG hashes. The original inputs and application remain unchanged.
 
 ## Format references
 
