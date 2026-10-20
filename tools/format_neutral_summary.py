@@ -42,6 +42,6 @@ s={'scope':'Actual candidate data; no raster. Counts/metrics conditional on reta
    'posthoc_feature_decomposition':features,
    'block_columns':['block','bytes','supported_literals','entropy_all','entropy_supported','mean_all','mean_supported','dominant_root_token','dominant_root_fraction','synthetic_end'],
    'blocks':blocks,
-   'full_results_sha256':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(P.glob('*.json')) if f.name!='compact_results.json'}}
+   'full_results_sha256':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [P/n for n in ['combined_models.json','combined_profiles.json','headerguided_models.json','headerguided_profiles.json','summary_both.json']]}}
 (P/'compact_results.json').write_text(json.dumps(s,separators=(',',':'),allow_nan=False)+'\n')
 print(json.dumps(s,separators=(',',':')))
